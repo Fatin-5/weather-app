@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="app-container">
+        <div class="app-header">
+            <h1 class="app-title">Weather Now</h1>
+            <p class="app-subtitle">Real-time weather information</p>
+        </div>
+
+        <div class="search-section">
+            <form class="search-form" id="searchForm">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="cityInput" 
+                    placeholder="Enter city name (e.g. London, New York)"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="search-button" id="searchButton">
+                    Get Weather
+                </button>
+            </form>
+        </div>
+<h3>4-Day Forecast</h3>
+<div id="forecastDisplay" class="forecast-grid"></div>
+
+        <div class="weather-content">
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <div class="weather-display" id="weatherDisplay">
+                <div class="weather-main">
+                    <div class="city-info" id="cityInfo"></div>
+                    <div class="weather-icon-container">
+                        <img class="weather-icon" id="weatherIcon" src="" alt="Weather Icon">
+                    </div>
+                    <div class="temperature" id="temperature"></div>
+                    <div class="weather-description" id="weatherDescription"></div>
+                    <div class="feels-like" id="feelsLike"></div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <div class="detail-icon">💧</div>
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value" id="humidity"></div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💨</div>
+                        <div class="detail-label">Wind Speed</div>
+                        <div class="detail-value" id="windSpeed"></div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">🌡️</div>
+                        <div class="detail-label">Pressure</div>
+                        <div class="detail-value" id="pressure"></div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">👁️</div>
+                        <div class="detail-label">Visibility</div>
+                        <div class="detail-value" id="visibility"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">Powered by OpenWeatherMap API</p>
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
